@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+<head>
+<title>Birthday Reminder App</title>
+<!--<meta charset="UTF-8">-->
+<!-- Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Resources -->
+
+<script src="_/js/myscript.js"></script>
+<link rel="stylesheet" href="_/css/BirthdayReminder.css" />
+
+<!-- jQuery Mobile from CDN -->
+<link rel="stylesheet" href="_/themes/test.app.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+
+</head> <!-- head --> 
+
+<body>
+
+<!-- Home Page -->
+<div id="home" data-role="page" data-title="View Source: Add" data-theme="b" >
+	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="b">
+    	<h1>Birthday Reminder</h1>    
+        <a href="#info" 
+        	data-icon="info" 
+            data-iconpos="notext"
+            data-rel="dialog"
+            class="ui-btn-right" 
+            >Info</a>
+        <!--
+        <a href="#back" data-icon="back
+        ">Home</a>
+        -->
+    </div> <!--Header -->
+    <div data-role="content">
+        <p>Displaying 0 Birthdays</p>
+        <br/>
+        <p>Reminder set to:</p>
+        <label for="reminderdays">
+                <select name="rdays" id="rdays" data-role="none">
+                	<option value="a">on their birthday</option>
+                    <option value="b">7 days before</option>
+                    <option value="c">30 days before</option>           
+                </select>
+        </label>
+    </div> <!--Content -->
+    
+   <div data-role="footer" data-theme="b" data-position="fixed" data-id="vs_footer" >
+        <div data-role="navbar">
+            <ul>
+            	<li><a
+                    data-transition="flip"
+                    data-role="button"
+                   
+                    data-icon="home" | href="#">Home</a>
+                </li>    
+                <li><a 
+                data-transition="flip"
+                data-role="button"
+                
+                data-icon="gear" | href="#add">Add</a>
+                </li>
+                <li><a href="#edit"
+                data-transition="flip"
+                data-role="button"
+                
+                data-icon="arrow-r"
+                >Edit</a></li>
+                <li><a href="#reminder"
+                data-transition="flip"
+                data-role="button"
+                data-mini="true"
+                data-icon="arrow-r"
+                >Reminder</a></li>
+            </ul>
+        </div> <!-- navbar -->
+     </div> <!-- footer -->  
+</div> <!-- end Home Page -->
+
+<!-- ADD Page -->
+<div id="add" 
+	data-role="page"
+    data-theme="b"  
+    data-title="View Source: Add">
+	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="b">
+    	<h1>Add a BIRTHDAY</h1> 
+        <a href="#home" data-icon="home"data-iconpos="notext">Home</a>
+    </div> <!-- Header -->
+    
+     <div data-role="content">
+     	<div id="column1">
+        <form method="GET" action="http://www.google.com/search">
+        	
+            First Name: <input type="text" name="fname1" id="Fname"data-mini="true" >
+            <br/>
+            Last Name: <input type="text" name="lname2" id="Lname" data-mini="true">
+            <br/>
+            Birthday: <!--<input type="numeric" name="mm3" id="mm3" disabled="true" size="2" value="MM"> -->
+            <label for="bmonth">
+              <select name="bmonth" id="bmonth" data-role="none">
+                	<option value="a">Jan</option>
+                    <option value="b">Feb</option>
+                    <option value="c">Mar</option>
+                    <option value="a">Apr</option>
+                    <option value="b">May</option>
+                    <option value="c">Jun</option>
+                    <option value="a">Jul</option>
+                    <option value="b">Aug</option>
+                    <option value="a">Sep</option>
+                    <option value="b">Oct</option>
+                    <option value="c">Nov</option>
+                    <option value="c">Dec</option>
+                </select></label>
+                <label for="bday">
+                <select name="bday" id="bday" data-role="none">
+                    <option value="a">1</option>
+                    <option value="b">2</option>
+                    <option value="c">3</option>
+                    <option value="a">4</option>
+                    <option value="b">5</option>
+                    <option value="c">6</option>
+                    <option value="a">7</option>
+                    <option value="b">8</option>
+                    <option value="a">9</option>
+                    <option value="b">10</option>
+                    <option value="c">11</option>
+                    <option value="c">12</option>
+                    <option value="a">13</option>
+                    <option value="b">14</option>
+                    <option value="c">15</option>
+                    <option value="a">16</option>
+                    <option value="b">17</option>
+                    <option value="c">18</option>
+                    <option value="a">19</option>
+                    <option value="b">20</option>
+                    <option value="c">21</option>
+                    <option value="c">22</option>
+                    <option value="a">23</option>
+                    <option value="b">24</option>
+                    <option value="c">25</option>
+                    <option value="a">26</option>
+                    <option value="b">27</option>
+                    <option value="c">28</option>
+                    <option value="a">29</option>
+                    <option value="b">30</option>
+                    <option value="c">31</option>
+                </select></label>
+            <br/>                
+            <br/>
+           <!-- <input type="button" name="savebirthday" id="savebirthday" value="save" >-->
+            <div id="savebirthday">
+            	<a data-role="button" data-mini="true"  data-icon="star" | href="">save</a>
+            </div>
+            <br/>
+        </form>      
+        </div> <!-- column1 -->
+        <div id="column2">
+        	<img src="images/bcupcakes3_web.png" heigth="80px"width="80px"/>
+      	</div> <!-- column2 -->
+    </div> <!--Content -->
+	
+  	<div data-role="footer" data-theme="b" data-position="fixed" data-id="vs_footer">
+        <div data-role="navbar">
+            <ul><li><a href="#home"
+                data-transition="flip"
+                data-role="button"
+               
+                data-icon="home"
+                >Home</a></li>    
+                <li><a href="#"
+                data-transition="flip"
+                data-role="button"
+                
+                data-icon="gear"
+                >Add</a></li>
+                <li><a href="#edit"
+                data-transition="flip"
+                data-role="button"
+                
+                data-icon="arrow-r"
+                >Edit</a></li>
+                <li><a href="#reminder"
+                data-transition="flip"
+                data-role="button"
+               
+                data-icon="arrow-r"
+                >Reminder</a></li>
+            </ul>
+        </div> <!-- navbar -->
+     </div> <!-- footer -->    
+</div><!-- end ADD Page -->
+<!-- EDIT Page -->
+<div id="edit" 
+	data-role="page" 
+    data-theme="b"
+    data-title="View Source: Edit">
+	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="b">
+    	<h1>Edit Page</h1> 
+        <a href="#home" data-icon="home"data-iconpos="notext">Home</a>
+    </div> <!-- Header -->
+    
+   	<div data-role="content"> 
+		<p> This is my Edit Page </p>
+    </div> <!-- Content -->
+    
+  	<div data-role="footer" data-theme="b" data-position="fixed" data-id="vs_footer">
+        <div data-role="navbar">
+            <ul><li><a href="#home"
+                data-transition="flip"
+                data-role="button"
+                
+                data-icon="home"
+                >Home</a></li>    
+                <li><a href="#add"
+                data-transition="flip"
+                data-role="button"
+                
+                data-icon="gear"
+                >Add</a></li>
+                <li><a href="#"
+                data-transition="flip"
+                data-role="button"
+               
+                data-icon="arrow-r"
+                >Edit</a></li>
+                <li><a href="#reminder"
+                data-transition="flip"
+                data-role="button"
+                
+                data-icon="arrow-r"
+                >Reminder</a></li>
+            </ul>
+        </div> <!-- navbar -->
+     </div> <!-- footer -->     
+</div><!-- end EDIT Page -->
+<!-- Reminder Page -->
+<div id="reminder" 
+	data-role="page" 
+    data-theme="b"
+    data-title="View Source: Reminder">
+	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="b">
+    	<h1>BIRTHDAY REMINDER</h1> 
+        <a href="#home" data-icon="home"data-iconpos="notext">Home</a>
+        
+    </div> <!-- Header -->
+    
+    <!--<div class="reminder" >-->
+		<!--<img src="images/ballon1.jpg"  />-->
+        <div class="background" data-role="content">
+ 			<div class="transbox">
+				 <p> Birthday Name1 </p>
+				 <p> Birthday Name2 </p>
+ 				 <p> Birthday Name3 </p>
+ 			</div> <!-- background -->
+ 		</div> <!-- transbox -->
+    <!--</div> <!-- Content -->
+	
+  	<div data-role="footer" data-theme="b" data-position="fixed" data-id="vs_footer">
+        <div data-role="navbar">
+            <ul><li><a href="#home"
+                data-transition="flip"
+                data-role="button"
+                
+                data-icon="home"
+                >Home</a></li>    
+                <li><a href="#add"
+                data-transition="flip"
+                data-role="button"
+               
+                data-icon="gear"
+                >Add</a></li>
+                <li><a href="#edit"
+                data-transition="flip"
+                data-role="button"
+               
+                data-icon="arrow-r"
+                >Edit</a></li>
+                <li><a href="#"
+                data-transition="flip"
+                data-role="button"
+               
+                data-icon="arrow-r"
+                >Reminder</a></li>
+            </ul>
+        </div> <!-- navbar -->
+     </div> <!-- footer -->    
+</div><!-- end Reminder Page -->
+<div data-role="page" id="info">
+	<div data-role="header">
+    	<h1> HELP</h1>
+    </div>
+    <div data-role="content">
+    	<p> This is the HELP page for the Birthday Reminder App </p>
+    </div>
+    <!--<a href="#home" data-role="button" data-inline="true" 
+        >home</a>
+        <a href="#" data-role="button" data-inline="true" 
+        data-rel="back">cancel</a>-->
+</div>  
+  
+
+</body>
+</html>
