@@ -12,18 +12,19 @@
 <link rel="stylesheet" href="_/css/BirthdayReminder.css" />
 
 <!-- jQuery Mobile from CDN -->
-<link rel="stylesheet" href="_/themes/test.app.css" />
+<!--<link rel="stylesheet" href="_/themes/test.app.css" />-->
+<link rel="stylesheet" href="_/themes/052713customtheme.css" />
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
 
 </head> <!-- head --> 
 
-<body>
+<body class=" ui-body-e ui-overlay-e">
 
 <!-- Home Page -->
-<div id="home" data-role="page" data-title="View Source: Add" data-theme="b" >
-	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="b">
+<div id="home" data-role="page" data-title="View Source: Add" data-theme="e" >
+	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="e">
     	<h1>Birthday Reminder</h1>    
         <a href="#info" 
         	data-icon="info" 
@@ -49,7 +50,7 @@
         </label>
     </div> <!--Content -->
     
-   <div data-role="footer" data-theme="b" data-position="fixed" data-id="vs_footer" >
+   <div data-role="footer" data-theme="e" data-position="fixed" data-id="vs_footer" >
         <div data-role="navbar">
             <ul>
             	<li><a
@@ -62,13 +63,13 @@
                 data-transition="flip"
                 data-role="button"
                 
-                data-icon="gear" | href="#add">Add</a>
+                data-icon="plus" | href="#add">Add</a>
                 </li>
                 <li><a href="#edit"
                 data-transition="flip"
                 data-role="button"
                 
-                data-icon="arrow-r"
+                data-icon="edit"
                 >Edit</a></li>
                 <li><a href="#reminder"
                 data-transition="flip"
@@ -84,11 +85,20 @@
 <!-- ADD Page -->
 <div id="add" 
 	data-role="page"
-    data-theme="b"  
+    data-theme="e"  
     data-title="View Source: Add">
-	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="b">
-    	<h1>Add a BIRTHDAY</h1> 
-        <a href="#home" data-icon="home"data-iconpos="notext">Home</a>
+	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="e">
+    	<h1>Add Birthday</h1> 
+        <a href="#home" 
+           data-icon="home" 
+           data-iconpos="notext"
+           >Home</a>
+        <a href="#info" 
+        	data-icon="info" 
+            data-iconpos="notext"
+            data-rel="dialog"
+            class="ui-btn-right" 
+            >Info</a>
     </div> <!-- Header -->
     
      <div data-role="content">
@@ -149,6 +159,70 @@
                     <option value="b">30</option>
                     <option value="c">31</option>
                 </select></label>
+                <label for="byear">
+                <select name="byear" id="byear" data-role="none">
+                    <option value="a">2012</option>
+                    <option value="b">2011</option>
+                    <option value="c">2010</option>
+                    <option value="a">2009</option>
+                    <option value="b">2008</option>
+                    <option value="c">2007</option>
+                    <option value="a">2006</option>
+                    <option value="b">2005</option>
+                    <option value="a">2004</option>
+                    <option value="b">2003</option>
+                    <option value="c">2002</option>
+                    <option value="c">2001</option>
+                    <option value="a">2000</option>
+                    <option value="b">1999</option>
+                    <option value="c">1998</option>
+                    <option value="a">1997</option>
+                    <option value="b">1996</option>
+                    <option value="c">1995</option>
+                    <option value="a">1994</option>
+                    <option value="b">1993</option>
+                    <option value="c">1992</option>
+                    <option value="c">1991</option>
+                    <option value="a">1990</option>
+                    <option value="b">1989</option>
+                    <option value="c">1988</option>
+                    <option value="a">1987</option>
+                    <option value="b">1986</option>
+                    <option value="c">1985</option>
+                    <option value="a">1984</option>
+                    <option value="b">1983</option>
+                    <option value="c">1982</option>
+                    <option value="c">1981</option>
+                    <option value="a">1980</option>
+                    <option value="b">1979</option>
+                    <option value="c">1978</option>
+                    <option value="a">1977</option>
+                    <option value="b">1976</option>
+                    <option value="c">1975</option>
+                    <option value="a">1974</option>
+                    <option value="b">1973</option>
+                    <option value="c">1972</option>
+                    <option value="c">1971</option>
+                    <option value="a">1970</option>
+                    <option value="b">1969</option>
+                    <option value="c">1968</option>
+                    <option value="a">1967</option>
+                    <option value="b">1966</option>
+                    <option value="c">1965</option>
+                    <option value="a">1964</option>
+                    <option value="b">1963</option>
+                    <option value="c">1962</option>
+                    <option value="c">1961</option>
+                    <option value="a">1960</option>
+                    <option value="b">1959</option>
+                    <option value="c">1958</option>
+                    <option value="a">1957</option>
+                    <option value="b">1956</option>
+                    <option value="c">1955</option>
+                    <option value="a">1954</option>
+                    <option value="b">1953</option>
+                    <option value="c">1952</option>
+                </select></label>
             <br/>                
             <br/>
            <!-- <input type="button" name="savebirthday" id="savebirthday" value="save" >-->
@@ -159,11 +233,11 @@
         </form>      
         </div> <!-- column1 -->
         <div id="column2">
-        	<img src="images/bcupcakes3_web.png" heigth="80px"width="80px"/>
+        	<img src="images/bhatonly.png" heigth="80px"width="80px"/>
       	</div> <!-- column2 -->
     </div> <!--Content -->
 	
-  	<div data-role="footer" data-theme="b" data-position="fixed" data-id="vs_footer">
+  	<div data-role="footer" data-theme="e" data-position="fixed" data-id="vs_footer">
         <div data-role="navbar">
             <ul><li><a href="#home"
                 data-transition="flip"
@@ -175,18 +249,18 @@
                 data-transition="flip"
                 data-role="button"
                 
-                data-icon="gear"
+                data-icon="plus"
                 >Add</a></li>
                 <li><a href="#edit"
                 data-transition="flip"
                 data-role="button"
                 
-                data-icon="arrow-r"
+                data-icon="edit"
                 >Edit</a></li>
                 <li><a href="#reminder"
                 data-transition="flip"
                 data-role="button"
-               
+                
                 data-icon="arrow-r"
                 >Reminder</a></li>
             </ul>
@@ -196,18 +270,24 @@
 <!-- EDIT Page -->
 <div id="edit" 
 	data-role="page" 
-    data-theme="b"
+    data-theme="e"
     data-title="View Source: Edit">
-	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="b">
-    	<h1>Edit Page</h1> 
+	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="e">
+    	<h1>Edit</h1> 
         <a href="#home" data-icon="home"data-iconpos="notext">Home</a>
+        <a href="#info" 
+        	data-icon="info" 
+            data-iconpos="notext"
+            data-rel="dialog"
+            class="ui-btn-right" 
+            >Info</a>
     </div> <!-- Header -->
     
    	<div data-role="content"> 
 		<p> This is my Edit Page </p>
     </div> <!-- Content -->
     
-  	<div data-role="footer" data-theme="b" data-position="fixed" data-id="vs_footer">
+  	<div data-role="footer" data-theme="e" data-position="fixed" data-id="vs_footer">
         <div data-role="navbar">
             <ul><li><a href="#home"
                 data-transition="flip"
@@ -219,13 +299,13 @@
                 data-transition="flip"
                 data-role="button"
                 
-                data-icon="gear"
+                data-icon="plus"
                 >Add</a></li>
                 <li><a href="#"
                 data-transition="flip"
                 data-role="button"
                
-                data-icon="arrow-r"
+                data-icon="edit"
                 >Edit</a></li>
                 <li><a href="#reminder"
                 data-transition="flip"
@@ -240,11 +320,17 @@
 <!-- Reminder Page -->
 <div id="reminder" 
 	data-role="page" 
-    data-theme="b"
+    data-theme="e"
     data-title="View Source: Reminder">
-	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="b">
-    	<h1>BIRTHDAY REMINDER</h1> 
+	<div data-role="header" data-position="fixed" data-id="vs_header" data-theme="e">
+    	<h1>Birthdays </h1> 
         <a href="#home" data-icon="home"data-iconpos="notext">Home</a>
+         <a href="#info" 
+        	data-icon="info" 
+            data-iconpos="notext"
+            data-rel="dialog"
+            class="ui-btn-right" 
+            >Info</a>
         
     </div> <!-- Header -->
     
@@ -259,41 +345,41 @@
  		</div> <!-- transbox -->
     <!--</div> <!-- Content -->
 	
-  	<div data-role="footer" data-theme="b" data-position="fixed" data-id="vs_footer">
+  	<div data-role="footer" data-theme="e" data-position="fixed" data-id="vs_footer">
         <div data-role="navbar">
             <ul><li><a href="#home"
                 data-transition="flip"
                 data-role="button"
-                
                 data-icon="home"
-                >Home</a></li>    
+                >Home</a></li> 
+                   
                 <li><a href="#add"
                 data-transition="flip"
                 data-role="button"
-               
-                data-icon="gear"
+                data-icon="plus"
                 >Add</a></li>
+                
                 <li><a href="#edit"
                 data-transition="flip"
                 data-role="button"
-               
-                data-icon="arrow-r"
+                data-icon="edit"
                 >Edit</a></li>
+                
                 <li><a href="#"
                 data-transition="flip"
-                data-role="button"
-               
-                data-icon="arrow-r"
+                data-role="button"   
+                data-icon="arrow-r" 
+                
                 >Reminder</a></li>
             </ul>
         </div> <!-- navbar -->
      </div> <!-- footer -->    
 </div><!-- end Reminder Page -->
-<div data-role="page" id="info">
-	<div data-role="header">
-    	<h1> HELP</h1>
+<div data-role="page" id="info" class="ui-body-e ui-overlay-e">
+	<div data-role="header"class="ui-bar-e">
+    	<h1>HELP</h1>
     </div>
-    <div data-role="content">
+    <div data-role="content" class="ui-btn-up-e">
     	<p> This is the HELP page for the Birthday Reminder App </p>
     </div>
     <!--<a href="#home" data-role="button" data-inline="true" 
