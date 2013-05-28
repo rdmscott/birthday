@@ -9,7 +9,7 @@ body {
 
 #home {
 	 /*background-image:url(../../images/bhatonly.png);*/
-	 background-image:url(../../images//ballon4.png);
+	 background-image:url(../images/ballon4.png);
 	 background-repeat:no-repeat;
 	 background-position:right center;
 	 margin-right: 5px;
@@ -65,7 +65,7 @@ div.background
    opacity: 0.6;
    	/*width: 80%;
 	height: 80%;*/
-   background:url(../../images/ballon3.jpg) no-repeat;
+   background:url(../images/ballon3.jpg) no-repeat;
    border:7px solid aqua;
    }
  div.transbox
