@@ -27,8 +27,8 @@ $(document).ready(  function() {
 	
 	function onDeviceReady() {
 	    console.log("in onDeviceReady routine");
-		if (window.localStorage.length > 0) {
-		for (var i=0; i <  window.localStorage.length; i++) {
+		if (window.localStorage.length > 1) {
+		for (var i=1; i <  window.localStorage.length; i++) {
 			var name = window.localStorage.key(i);
 			var value = window.localStorage.getItem(name);
 			
