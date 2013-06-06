@@ -33,7 +33,7 @@ $(document).ready(  function() {
 			var value = window.localStorage.getItem(name);
 			
 			// check if birthday needs a reminder
-			$("#view").append(name + value);
+			$("#view").append("length:" + window.localStorage.length + "Name:" + name + "Value:" + value);
 		}
 		} else {
 			$("p.zero").text("Displaying 0 Birthdays");
