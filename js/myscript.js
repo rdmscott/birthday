@@ -1,7 +1,5 @@
 // JavaScript Document
-$(document).ready(function() {
-	console.log("in documentReady");
-	
+
 	
 //  $("#deletebirthday").click(function() {
 //		var name = fname1 + " " + lname2;
@@ -15,13 +13,15 @@ $(document).ready(function() {
 //		lname2 = name.lname2
 //		bmonth = name.date
 //	});
-});
+
 
 function onLoad(){	
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 function onDeviceReady() {
-	$("#savebirthday").click(function() {
+	$(document).ready(function() {
+		console.log("documentReady");
+		$("#savebirthday").click(function() {
 			//alert("savebirthday");
 			console.log("savebirthday Function");
 		 	var fName = $("#Fname").val();
@@ -39,6 +39,7 @@ function onDeviceReady() {
 			$("#output").html("Save completed");
 			//onDeviceReady();
 		});
+	});
 	    console.log("onDeviceReady");
 		if (window.localStorage.length > 1) {
 			for (var i=1; i <  window.localStorage.length; i++) {
