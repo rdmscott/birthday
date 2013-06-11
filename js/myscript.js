@@ -17,10 +17,10 @@ $(document).ready(function() {
 //	});
 });
 
-	
+function onLoad(){	
 	document.addEventListener("deviceready", onDeviceReady, false);
-	
-	function onDeviceReady() {
+}
+function onDeviceReady() {
 	    console.log("onDeviceReady");
 		if (window.localStorage.length > 1) {
 			for (var i=1; i <  window.localStorage.length; i++) {
@@ -32,7 +32,9 @@ $(document).ready(function() {
 			}
 		} else {
 			$("p.zero").text("Displaying 0 Birthdays");
-		};
+		}
+}
+
 		$("#savebirthday").click(function() {
 			//alert("savebirthday");
 			console.log("savebirthday Function");
@@ -51,6 +53,6 @@ $(document).ready(function() {
 			$("#output").html("Save completed");
 			//onDeviceReady();
 		});
-	}
+	
 
 
