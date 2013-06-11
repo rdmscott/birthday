@@ -21,8 +21,16 @@ function onLoad(){
 function onDeviceReady() {
 	$(document).ready(function() {
 		console.log("documentReady");
-		$("#savebirthday").vclick(function() {
-			//alert("savebirthday");
+		var clickOk = true;
+		$("#savebirthday").on("tap", function() {
+			//if (clickOk === true) {
+        	//	clickOk = false;
+        	//	setTimeout(function () {
+            //	clickOk = true;
+        	//	}, 350);
+       		//	 //run click code now
+    		//}
+   			//return false;			//alert("savebirthday");
 			console.log("savebirthday Function");
 		 	var fName = $("#Fname").val();
 		 	var lName = $("#Lname").val();
