@@ -19,10 +19,10 @@ function onLoad(){
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 function onDeviceReady() {
-	$(document).ready(function() {
+	//$(document).ready(function() {
 		console.log("documentReady");
 		var clickOk = true;
-		$("#savebirthday").on("vclick", function() {
+		$("#savebirthday").bind("click", function() {
 			//if (clickOk === true) {
         	//	clickOk = false;
         	//	setTimeout(function () {
@@ -47,7 +47,7 @@ function onDeviceReady() {
 			$("#output").html("Save completed");
 			//onDeviceReady();
 		});
-	});
+	//});
 	    console.log("onDeviceReady");
 		if (window.localStorage.length > 1) {
 			for (var i=1; i <  window.localStorage.length; i++) {
