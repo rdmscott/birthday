@@ -2,10 +2,19 @@
 $(document).ready(function() {
 	console.log("in documentReady");
 	$("#savebirthday").click(function() {
-		var name = fname1 + " " + lname2;
-		var date = bmonth + "/" + bday + "/" + byear ;
+		 var fName = $("#Fname").val();
+		 var lName = $("#Lname").val();
+		 var month = $("#bmonth").val();
+		 var day   = $("#bday").val();
+		 var year  = $("#byear").val();
+		//alert(fName);
+		var name = lName + ", " + fName;
+		var date = month + "/" + day + "/" + year ;
+		//alert(name+date);
 		console.log(name + date);
 		window.localStorage.setItem(name, date);
+		$("#output").html("Save completed");
+		//onDeviceReady();
 	});
 	
 //  $("#deletebirthday").click(function() {
@@ -33,7 +42,7 @@ $(document).ready(function() {
 			var value = window.localStorage.getItem(name);
 			
 			// check if birthday needs a reminder
-			$("#view").append("length:" + window.localStorage.length + "Name:" + name + "Value:" + value);
+			$("#view").append("length:" + window.localStorage.length + "Name:" + name + "   " + "Value:" + value);
 		}
 		} else {
 			$("p.zero").text("Displaying 0 Birthdays");
