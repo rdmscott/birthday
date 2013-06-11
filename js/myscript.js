@@ -22,7 +22,7 @@ function onDeviceReady() {
 	$(document).ready(function() {
 		console.log("documentReady");
 		var clickOk = true;
-		$("#savebirthday").on("tap", function() {
+		$("#savebirthday").on("vclick", function() {
 			//if (clickOk === true) {
         	//	clickOk = false;
         	//	setTimeout(function () {
