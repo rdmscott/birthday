@@ -23,16 +23,16 @@ $(document).ready(function() {
 	function onDeviceReady() {
 	    console.log("onDeviceReady");
 		if (window.localStorage.length > 1) {
-		for (var i=1; i <  window.localStorage.length; i++) {
-			var keyname = window.localStorage.key(i);
-			var value = window.localStorage.getItem(keyname);
+			for (var i=1; i <  window.localStorage.length; i++) {
+				var keyname = window.localStorage.key(i);
+				var value = window.localStorage.getItem(keyname);
 			
 			// check if birthday needs a reminder
-			$("#view").append("length:" + window.localStorage.length + "Name:" + keyname + "   " + "Value:" + value);
-		}
+				$("#view").append("length:" + window.localStorage.length + "Name:" + keyname + "   " + "Value:" + value);
+			}
 		} else {
 			$("p.zero").text("Displaying 0 Birthdays");
-		}
+		};
 		$("#savebirthday").click(function() {
 			//alert("savebirthday");
 			console.log("savebirthday Function");
