@@ -44,14 +44,11 @@ function onDeviceReady() {
 			//alert(name+date);
 			console.log(name + date);
 			window.localStorage.setItem(name, date);
-			var value = window.localStorage.getItem(name);
-			console.log(value);
 			$("#output").html("Save completed");
 			//onDeviceReady();
 		});
 	//});
 	    console.log("onDeviceReady");
-		console.log(window.localStorage.length);
 		if (window.localStorage.length > 1) {
 			for (var i=1; i <  window.localStorage.length; i++) {
 				var keyname = window.localStorage.key(i);
