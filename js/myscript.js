@@ -1,5 +1,5 @@
 // JavaScript Document
-$(document).ready(  function() {
+$(document).ready(function() {
 	console.log("in documentReady");
 	$("#savebirthday").click(function() {
 		var name = fname1 + " " + lname2;
