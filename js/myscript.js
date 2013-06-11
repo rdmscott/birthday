@@ -15,9 +15,9 @@
 //	});
 
 
-function onLoad(){	
+//function onLoad(){	
 	document.addEventListener("deviceready", onDeviceReady, false);
-}
+//}
 function onDeviceReady() {
 	//$(document).ready(function() {
 		console.log("documentReady");
