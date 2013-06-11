@@ -21,7 +21,7 @@ function onLoad(){
 function onDeviceReady() {
 	$(document).ready(function() {
 		console.log("documentReady");
-		$("#savebirthday").click(function() {
+		$("#savebirthday").vclick(function() {
 			//alert("savebirthday");
 			console.log("savebirthday Function");
 		 	var fName = $("#Fname").val();
