@@ -14,10 +14,25 @@
 //		bmonth = name.date
 //	});
 
-
-//function onLoad(){	
+function displaybdays() {
+	
+if (window.localStorage.length > 1) {
+			for (var i=1; i <  window.localStorage.length; i++) {
+				var keyname = window.localStorage.key(i);
+				var value = window.localStorage.getItem(keyname);
+			
+			// check if birthday needs a reminder
+			//	$("#view").append("length:" + window.localStorage.length + "Name:" + keyname + "   " + "Value:" + value);
+				var space = "    ";
+				$("#view").append(keyname + space + value);
+			}
+		} else {
+			$("p.zero").text("Displaying 0 Birthdays");
+		}	
+}		
+//	
 	document.addEventListener("deviceready", onDeviceReady, false);
-//}
+//
 function onDeviceReady() {
 	//$(document).ready(function() {
 		console.log("documentReady");
@@ -30,7 +45,7 @@ function onDeviceReady() {
         	//	}, 350);
        		//	 //run click code now
     		//}
-   			//return false;			//alert("savebirthday");
+   			//return false;			
 			console.log("savebirthday Function");
 		 	var fName = $("#Fname").val();
 		 	var lName = $("#Lname").val();
@@ -45,24 +60,17 @@ function onDeviceReady() {
 			console.log(name + date);
 			window.localStorage.setItem(name, date);
 			$("#output").html("Save completed");
-			//onDeviceReady();
+			
 		});
 	//});
 	    console.log("onDeviceReady");
-		if (window.localStorage.length > 1) {
-			for (var i=1; i <  window.localStorage.length; i++) {
-				var keyname = window.localStorage.key(i);
-				var value = window.localStorage.getItem(keyname);
-			
-			// check if birthday needs a reminder
-				$("#view").append("length:" + window.localStorage.length + "Name:" + keyname + "   " + "Value:" + value);
-			}
-		} else {
-			$("p.zero").text("Displaying 0 Birthdays");
-		}
+		displaybdays();
+		$("#home").click(function() {
+        	displaybdays();
+   		 });
 }
 
-		
+
 	
 
 
