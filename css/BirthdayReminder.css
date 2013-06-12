@@ -68,10 +68,11 @@ div.background
    height: 100%;
    opacity: 0.6;
    background:url(../images/ballon3.jpg) no-repeat ;
+/*   background-position:bottom left, center top;
    -webkit-background-size: contain;
    -moz-background-size: contain;
-   -o-background-size: contain;
-   background-size: contain;
+   -o-background-size: contain; */
+   background-size: cover;
 /* border:7px solid aqua;*/
    }
  div.transbox
