@@ -24,7 +24,10 @@ if (window.localStorage.length > 1) {
 			// check if birthday needs a reminder
 			//	$("#view").append("length:" + window.localStorage.length + "Name:" + keyname + "   " + "Value:" + value);
 				var space = "    ";
-				$("#view").append(keyname + space + value + "\r\n");
+				var displayname = "<li>" + keyname + "&nbsp&nbsp$nbsp$nbsp" + value + "</li>";
+				$("#mylistview").append(displayname);
+			//	$("#view").append(keyname + space + value + "\r\n");
+			    
 			}
 		} else {
 			$("p.zero").text("Displaying 0 Birthdays");
@@ -61,16 +64,16 @@ function onDeviceReady() {
 			window.localStorage.setItem(name, date);
 			$("#output").html("Save completed");
 			var space = "    ";
-			$("#view").append(name + space + date);
+			$("#mylistview").append(name + space + date);
 			
 		});
 	//});
 	    console.log("onDeviceReady");
 		displaybdays();
-		$("#home").click(function() {
-			$("#view").html('');
-        	displaybdays();
-   		 });
+	//	$("#home").click(function() {
+	//		$("#view").html('');
+    //   	displaybdays();
+   	//	 });
 }
 
 
