@@ -7,6 +7,10 @@ body {
 	height:960px;*/
 }
 
+button {
+	height: 25px;
+}
+
 #home {
 	 /*background-image:url(../../images/bhatonly.png);*/
 	 background-image:url(../images//ballon4.png);
@@ -38,7 +42,7 @@ h3 {
 	/*width: 50%;      */
 	/*margin:auto;     */
 	/*margin-top: -150px;*/
-	margin-top: -20px;
+	margin-top: -10px;
 	margin-right: 10px;
 	float:right;
 	position:relative;

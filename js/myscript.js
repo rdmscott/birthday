@@ -24,7 +24,7 @@ if (window.localStorage.length > 1) {
 			// check if birthday needs a reminder
 			//	$("#view").append("length:" + window.localStorage.length + "Name:" + keyname + "   " + "Value:" + value);
 				var space = "    ";
-				var displayname = "<li>" + keyname + "&nbsp&nbsp$nbsp$nbsp" + value + "</li>";
+				var displayname = "<li>" + keyname + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + value + "</li>";
 				$("#mylistview").append(displayname);
 			//	$("#view").append(keyname + space + value + "\r\n");
 			    
@@ -63,8 +63,10 @@ function onDeviceReady() {
 			console.log(name + date);
 			window.localStorage.setItem(name, date);
 			$("#output").html("Save completed");
-			var space = "    ";
-			$("#mylistview").append(name + space + date);
+			
+			var displayname = "<li>" + name + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + date + "</li>";
+			$("#mylistview").append(displayname);
+			//$("#mylistview").append(name + space + date);
 			
 		});
 	//});
