@@ -60,6 +60,7 @@ function onDeviceReady() {
 			console.log(name + date);
 			window.localStorage.setItem(name, date);
 			$("#output").html("Save completed");
+			$("#view").html("");
 			
 		});
 	//});
